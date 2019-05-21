@@ -9,3 +9,4 @@
 * [6. 검색엔진최적화 - SEO](SEO.md)
 * [7. 스타트업 개발 vs 엔터프라이즈급 개발](startUp_VS_enterPrise.md)
 * [8. 구글 에드 센스](pdf/googleAdsense.pdf)
+* [9. 적절한 기술스택 선정]()
