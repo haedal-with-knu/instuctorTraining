@@ -11,6 +11,6 @@
 * [8. 구글 에드 센스](pdf/googleAdsense.pdf)
 
 # 실습 및 과제 자료 만들기
-`challenge` 폴더에 문제를 정리하고,  
-`answerSheet` 폴더에 모범답안 정리해봅니다
+[`challenge`](challenge) 폴더에 문제를 정리하고,  
+[`answerSheet`](answerSheet) 폴더에 모범답안 정리해봅니다
 * [A. HTML, CSS 활용 - 자기소개카드 만들기]()
