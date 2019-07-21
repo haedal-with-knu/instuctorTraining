@@ -90,18 +90,44 @@ print(lotto)
 로또를 사기만 해서는 의미가 없죠!  
 여러분의 로또 번호가 당첨되었는지 아닌지 그 여부를 살펴보도록 합시다.     
 이번에는 파이썬에서 HTTP 요청을 보내는 용도로 쓰이는 `requests` 모듈을 사용할 것입니다.
-`requests` 모듈은 내장되어 있지 않기 때문에 `pip`를 통해 설치해주어야 합니다.  
-`명령 프롬프트(cmd)`에서 다음 명령어를 실행해 `requests` 모듈을 설치합니다.
+그리고 원하는 정보를 추출하기 위해 `BeautifulSoup` 모듈도 사용하겠습니다.
+다음 모듈들은 설치되어 있지 않을 수 있기 때문에 `pip`를 통해 설치해주어야 합니다.  
+`명령 프롬프트(cmd)`에서 다음 명령어를 실행해 모듈들을 설치합니다.
 ```
 pip3 install requests 
+pip3 install beautifulsoup4
 ```
+전체적 흐름은 다음과 같습니다.  
+우선 `requests`모듈을 이용해 복권사이트로부터 최신 회차를 알아냅니다.
+`BeautifulSoup`과 `requests`모듈을 이용합니다.  
+이렇게 얻어낸 회차 정보를 통해 당첨 번호를 찾아서 받아옵니다.  
+마지막으로 받아온 당첨 번호 데이터를 깔끔한 형태로 보입니다.    
 
-`requests`모듈을 이용해 복권사이트로부터 복권 정보를 받아옵니다.
-`requests`모듈의 `get()` 함수를 이용합니다.  
-이렇게 받아온 데이터는 문자열이나 딕셔너리의 형태로 저장이 가능합니다.  
-본 예제에서는 이름이 `lotto`인 딕셔너리의 형태로 저장하겠습니다.
+그럼 먼저 복권사이트로부터 최신 회차가 무엇인지 알아보겠습니다.
 ```
-url = f"https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=866"
+r = requests.get('https://dhlottery.co.kr/common.do?method=main')
+print(r)
+```
+`requests` 모듈의 `get()`함수로  복권사이트의 주소로 HTTP 요청을 보냈고, 서버로부터 받은 응답을   
+`r` 함수에 텍스트 형태로 저장합니다.  
+그리고 저장된 데이터를 `print()`함수로 출력해 우리가 찾으려는 데이터가 어디 있는지 확인합니다.  
+![add_1](./img/print_lottoround.png)
+다음과 같이 `id="lottoDrwNo"`인 `strong` 태그 안에 우리가 원하는 회차 정보가 있는 것을 확인할 수 있습니다.
+
+이제 `BeautifulSoup`을 사용해 회차 정보를 `lotto_round`라는 변수에 저장하겠습니다.
+```
+soup = BeautifulSoup(r,'html.parser')
+lotto_round = soup.find('strong', id='lottoDrwNo').text
+```
+위의 코드에 대해 간단히 설명하고 넘어가겠습니다.  
+먼저 앞서 준비해둔 `html_doc`형태의 데이터와 `html.parser`를 사용해 `soup` 객체를 생성하였습니다.
+이후 `find` 메소드를 통해 `id='lottoDrwNo'`인 `strong` 객체 안의 내용을 `lotto_round`에 저장했습니다.  
+  
+구한 회차정보와 `requests` 모듈을 활용해 복권사이트로부터 복권 정보를 받아옵니다. 
+`requests`모듈의 `get()` 함수를 통해 받아온 데이터는 문자열이나 딕셔너리의 형태로 저장이 가능합니다.  
+본 예제에서는 이름이 `lotto`인 딕셔너리의 형태로 저장하겠습니다
+```
+url = f"https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={lotto_round}"
 response = requests.get(url)
 lotto = response.json() # => dict
 ```
@@ -112,7 +138,7 @@ print(lotto)
 
 ![3](./img/3.png)      
 
-표시한 것처럼 6개의로또 번호는 drwtNO# 형태의 키로, 보너스 숫자는 bnusNo 키에 저장되어 있는 것을 알 수 있습니다.  
+표시한 것처럼 6개의로또 번호는 `drwtNO#` 형태의 키로, 보너스 숫자는 `bnusNo` 키에 저장되어 있는 것을 알 수 있습니다.  
 이제 당첨 번호를 보기 좋게 `winner`라는 변수에 담아 표현하겠습니다. 일단 `winner`란 이름의 빈 리스트를 만들어둡니다.
 ```
 winner = []
