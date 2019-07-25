@@ -4,4 +4,4 @@
 ![](../img/ex1_HTML_CSS.png)
 ![](../img/ex1_HTML_CSS_2.png)
 
-## [모범답안](../challenge/A.HTML_CSS_mycard.md)
+## [모범답안](../answerSheet/A.HTML_CSS_mycard/A.HTML_CSS_mycard_answer.md)
