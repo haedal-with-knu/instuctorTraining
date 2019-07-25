@@ -16,6 +16,17 @@
 * [A. HTML, CSS 활용 - 자기소개카드 만들기](challenge/A.HTML_CSS_mycard.md)
 * [B. 파이썬으로 로또뽑고 현실과 비교하기](challenge/B.python_lotto_check.md)
 * [C. Flask를 통해 웹서버 입문하기](https://github.com/kei01138/flaskIntroduction)
-* [D. Python AnyWhere을 통해 베포하기]()
-* [E. AWS를 통해 베포하기]()
+* [D. Python AnyWhere을 통해 베포하기](challenge/D.python_anywhere.md)
+* [E. AWS를 통해 베포하기](challenge/E.AWS_Publishing.md)
+
+# 스터디 자료 만들기
+* [HTML](study/html.md)
+* [CSS](study/css.md)
+* [python 변수](study/python_variable.md)
+* [python 조건](study/python_condition.md)
+* [python 반복](study/python_iteration.md)
+* [python 함수](study/python_function.md)
+* [python 클래스 (+ 모듈)](study/python_class.md)
+
+
 
