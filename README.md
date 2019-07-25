@@ -20,6 +20,7 @@
 * [E. AWS를 통해 베포하기](challenge/E.AWS_Publishing.md)
 
 # 스터디 자료 만들기
+> HTML, CSS는 주제를 찾아뒀고, python부분은 구름EDU 강의를 참조합시다
 * [HTML](study/html.md)
 * [CSS](study/css.md)
 * [python 변수](study/python_variable.md)
