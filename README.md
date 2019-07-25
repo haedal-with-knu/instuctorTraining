@@ -15,3 +15,7 @@
 [`answerSheet`](answerSheet) 폴더에 모범답안 정리해봅니다
 * [A. HTML, CSS 활용 - 자기소개카드 만들기](challenge/A.HTML_CSS_mycard.md)
 * [B. 파이썬으로 로또뽑고 현실과 비교하기](challenge/B.python_lotto_check.md)
+* [C. Flask를 통해 웹서버 입문하기](https://github.com/kei01138/flaskIntroduction)
+* [D. Python AnyWhere을 통해 베포하기]()
+* [E. AWS를 통해 베포하기]()
+
