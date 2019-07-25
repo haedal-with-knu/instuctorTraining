@@ -10,3 +10,5 @@
 2. 나는 몇등일까?
 3. 내 등수 이쁘게 보여주자
     * `flask` 사용하기
+
+## [모범답안](../answerSheet/B.python_lotto_check.md/B.python_lotto_check_answer.md)

@@ -4,4 +4,4 @@
 ![](../img/ex1_HTML_CSS.png)
 ![](../img/ex1_HTML_CSS_2.png)
 
-## 모범답안은 [`answerSheet/A.HTML_CSS_mycard`](../answerSheet/A.HTML_CSS_mycard) 폴더에 있습니다
+## [모범답안](../challenge/A.HTML_CSS_mycard.md)
