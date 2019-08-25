@@ -256,9 +256,9 @@ height: 이미지 세로 크기
 
 예시
 
-<p align="middle"> 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jNAK7QL5JjI" frameborder="0">이 브라우저는 iframe을 지원하지 않습니다</iframe>
-</p>
+
+<iframe src="https://www.youtube.com/embed/jNAK7QL5JjI" frameborder="0" width="560" height="315"></iframe>
+
 
 
 
