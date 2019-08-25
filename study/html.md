@@ -38,7 +38,8 @@ Semantic 태그는 개발자와 브라우저에게 의미가 있는 태그를 �
 </body>
 </html>
 ```
-![1](./image/Semantic_tag.jpg)
+
+<img src="https://www.w3schools.com/html/img_sem_elements.gif">
 
 `non-Semantic Tag`: Semantic Tag와는 다르게 의미를 가지지 않는 태그이다.
 대신 사용자가 원하는 대로 정의 할 수 있다.
