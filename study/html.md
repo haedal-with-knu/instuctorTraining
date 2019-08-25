@@ -255,12 +255,10 @@ height: 이미지 세로 크기
 
 
 예시
-
-
-<iframe src="https://www.youtube.com/embed/jNAK7QL5JjI" frameborder="0" width="560" height="315"></iframe>
-
-
-
+```
+<iframe src="https://www.youtube.com/embed/jNAK7QL5JjI">
+</iframe>
+```
 
 
 `form`
