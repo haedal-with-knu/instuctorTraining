@@ -1,3 +1,4 @@
+
 ## HTML
 `HTML Tag`
 
@@ -255,10 +256,10 @@ height: 이미지 세로 크기
 
 
 예시
-```
-<iframe src="https://www.youtube.com/embed/jNAK7QL5JjI">
-</iframe>
-```
+
+
+<iframe src="https://www.youtube.com/embed/jNAK7QL5JjI"> </iframe>
+
 
 
 `form`
@@ -276,9 +277,7 @@ input 태그의 type이라는 속성을 이용해 입력 양식을 여러가지�
 (텍스트) 이름 : <input type="text" name="name" />
 </form>
 ```
-<form>
-(텍스트) 이름 : <input type="text" name="name" />
-</form>
+![text](../img/text.PNG)
 
 2.password : 비밀번호를 입력하는 창을 생성합니다.
 ```
@@ -286,10 +285,7 @@ input 태그의 type이라는 속성을 이용해 입력 양식을 여러가지�
 (비밀번호)비밀번호 <input type="password" name="pass" />
 </form>
 ```
-
-<form>
-(비밀번호)비밀번호 <input type="password" name="pass" />
-</form>
+![text](../img/password.PNG)
 
 
 3.radio : 라디오 버튼을 생성합니다.
@@ -300,12 +296,7 @@ input 태그의 type이라는 속성을 이용해 입력 양식을 여러가지�
 <input type="radio" name="gender" value="no" checked /> 비고
 </form>
 ```
-<form>
-라디오 버튼(성별)
-<input type="radio" name="gender" value="male" /> 남성
-<input type="radio" name="gender" value="female" /> 여성
-<input type="radio" name="gender" value="no" checked /> 비고
-</form>
+![text](../img/radio.PNG)
 
 
 추가적인 학습 : [MDN HTML Tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), [poiemaweb](https://poiemaweb.com/), [velopert](https://velopert.com)
