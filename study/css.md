@@ -64,17 +64,16 @@ selector { property : value ; }
 ```
 그냥 저렇게 봐서는 전혀 감도 오지 않을 것 같으니, 선택자의 종류와 예시를 같이 들면서 보면 될 것이다.
 #### CSS 선택자의 종류
-
+* tag
+* *\
+* id
+* class
+* parent > child
+등이 있다.
 ## 3. 결론
 
 
 
-`css` 선택자
-  - `tag`
-  - `*`
-  - `id`
-  - `class`
-  - `parent > child`
 ```css
 /* CSS comment */
 /* 1.tag name */
