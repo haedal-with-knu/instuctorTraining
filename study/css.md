@@ -215,13 +215,85 @@ p > b {
 </body>
 </html>
 ```
-`font`
-  - `font-size`
-  - `font-style`
-  - `font-weight`
-  - `font-family`
+여기까지 우리는 CSS 선택자에 대해 알아보았다. 이제 우리가 실제로 읽는 글을 어떻게 꾸미는지 알아보자. 글자.. 우리는 글자를 꾸밀 것이다. '글자를 써 놓은 모양'을 서체라고 한다. 서체가 영어로 뭐지? font다!
+  - font-size
+  - font-style
+  - font-weight
+  - font-family
+  
+위 네 가지 기본적인 속성에 대해 알아보자.
 
-`google font`
+##### font-size
+말그대로 폰트의 크기를 관장한다.
+```
+/* CSS */
+h1 { font-size: 250%; }
+h2 { font-size: 200%; }
+p { font-size: 100%; }
+```
+부모 요소의 크기에 비례하게 하려면 백분율 값을 지정해 주면 된다.  
+구체적인 크기를 지정해 주려면 픽셀 값을 지정해 주면 되지만, 실제 보여지는 페이지에서는 사용자가 창의 크기를 조정함에 따라 브라우저가 글자를 확대하거나 축소하기 때문에 어떤 크기로 글자가 보여질지는 정확하게 알 수 없다.
+###### 속성값
+* xx-small
+* x-small
+* small
+* medium
+* large
+* x-large
+* xx-large
+* smaller
+* larger
+* %(퍼센트)
+* initial(기본값)
+* inherit(부모 요소로부터 상속)
+
+등이 있다.
+
+##### font-style
+글꼴의 모양을 관장한다.
+```
+/* CSS */
+p.normal {font-style:normal;}
+p.italic {font-style:italic;}
+p.oblique {font-style:oblique;}
+```
+###### 속성값
+* normal(기본값)
+* italic(이탤릭)
+* oblique(비스듬한 모양)
+* inherit(부모 요소로부터 상속)
+
+##### font-weight
+글꼴의 두께를 관장한다.
+```
+/* CSS */
+p.normal {font-weight:normal;}
+p.thick {font-weight:bold;}
+p.thicker {font-weight:900;}
+```
+###### 속성값
+* normal(기본값)
+* bold(굵은 글꼴 지정)
+* bolder(더 굵은 글꼴 지정)
+* lighter(기본값보다 얇게 지정)
+* 100, 200, …, 900(400이 normal, 700이 bold)
+
+##### font-family
+글꼴 종류를 지정하며 값이 상속된다.
+```
+/* CSS */
+body { font-family :'나눔고딕', 'Malgun Gothic', sans-serif;}
+```
+콤마로 글꼴을 구별하며 맨 앞에 지정한 것 부터 브라우저가 글꼴을 탐색하고, 있다면 그 글꼴을 적용시키고 없다면 뒤로 넘어간다.
+###### 속성값
+* 글꼴 이름
+* inherit(부모 요소로부터 상속)
+
+
+
+
+#### GOOGLE FONT
+구글에서는 많은 종류의 웹폰트를 지원하고 있고, 우리는 그것을 가져다 쓸 수 있다!~~개꿀~~ 코드 몇 줄만 추가해 주면 내 페이지의 가독성이 더 좋아질 것이다. [여기](https://fonts.google.com/)에서 마음에 드는 폰트를 골라보자.(Language에서 Korean을 선택하면 한글 폰트가 있다)
 
 ```html
 <!DOCTYPE html>
@@ -249,9 +321,11 @@ p > b {
 </html>
 ```
 코딩 결과는 다음과 같다.  
-![코딩 결과](./img/ex_reusult.png)  
-`Bootstrap` 도입
-      
+![coding_result](./img/ex_result.PNG)  
+덧붙이자면 IE에서는 기본적으로 구글 웹폰트를 사용할 수 없다.~~크롬 안쓰는 흑우없제?~~ IE에서 구글 웹폰트를 사용하고 싶다면 [이 글](https://www.codingfactory.net/10453)을 참고하도록 하자.
+
+### BOOTSTRAP
+CSS의 아주 기본을 공부해 보았다. 근데 우리가 이거를 처음부터 다 만들어야 할까? 고맙게도 능력자~~변태~~들이 다 만들어서 우리에게 잘 쓰라고 만들어놓은 것들이 있는데, 그것이 부트스트랩이다. [여기](instuctorTraining/makeOpensourceProject.md)를 보면 대충 사용법이 있다.
 
 
 ## 3. 결론
