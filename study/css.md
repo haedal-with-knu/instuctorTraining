@@ -76,8 +76,9 @@ selector { property: value; }
     - 자식 선택자
     - 자손 선택자
 
-등이 있다.  
-전체 선택자와 요소 선택자
+등이 있다.
+##### 기본 선택자
+* 전체 선택자와 요소 선택자
 ```
 /* CSS */
 * { margin: 0; text-decoration: none; }
@@ -102,6 +103,7 @@ div#id2 { background: darkgreen; color: yellowgreen; }
 <p id="id2">ID 선택자(ID Selector)</p>
 <div id="id2">ID 선택자(ID Selector)</div>
 ```
+#myID { 속성; }
 * class 선택자
 ```
 /* CSS */
@@ -112,7 +114,20 @@ div.class2 { background: darkgreen; color: yellowgreen; }
 <p class="class1">클래스 선택자(Class Selector)</p>
 <p class="class2">클래스 선택자(Class Selector)</p>
 <div class="class2">클래스 선택자(Class Selector)</div>
+
 ```
+.myClass { 속성; }   
+class 선택자는 속성값을 두 개 이상 지정해 줄 수 있다.
+척 봐도 생긴것도 비슷하게 생겼고, 실제로 위의 id선택자와 class선택자는 같은 결과를 출력한다. 그렇다면 언제 id 선택자를 사용하고 언제 class 선택자를 사용하는지를 정해야 할 텐데, 정확한 기준은 없는 듯 하다. ~~마음대로 하면 된다는 말~~ 하지만 어느 정도의 가이드라인은 있는 듯 하니, 여기다 적어 보겠다.
+* 한 페이지 내에서 여러 번 반복될 필요가 있는 스타일은 class 선택자를 사용하고, 단 한번 유일하게 적용될 스타일은 id 선택자를 사용하는 것이 좋다. 실제로 class와 id의 뜻도 class는 학급, 계층 등의 뭉텡이 같은 느낌이고, id는 개별적인 느낌이 든다.
+* 클래스 선택자는 글자색이나 글자 굵기 등 나중에 다른 곳에도 적용할 수 있는 스타일을 지정하고, ID선택자는 웹 문서 안에서 요소의 배치 방법을 지정할 때 자주 사용합니다.
+##### 복합 선택자
+복합 선택자는 두 개 이상의 선택자 요소가 모인 선택자이다.
+* 하위 선택자와 자식 선택자
+```
+
+```
+
 
 #### CSS 우선순위
  1. `!important`
